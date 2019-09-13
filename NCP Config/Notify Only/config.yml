@@ -80,14 +80,14 @@ checks:
   blockbreak:
     direction:
       active: true
-      actions: cancel vl>10 log:notifylvlbb:0:8:i cancel vl>20 log:notifylvlcb:0:8:i cancel
+      actions:   vl>10 log:notifylvlbb:0:8:i   vl>20 log:notifylvlcb:0:8:i  
     fastbreak:
       active: true
       strict: true
       delay: 95
       intervalsurvival: 100
       grace: 2000
-      actions: cancel vl>1 log:notifylvlab:1:9:i cancel vl>3 log:notifylvlbb:1:8:i cancel vl>8 log:notifylvlcb:1:7:i cancel
+      actions:   vl>1 log:notifylvlab:1:9:i   vl>3 log:notifylvlbb:1:8:i   vl>8 log:notifylvlcb:1:7:i  
     frequency:
       active: true
       intervalcreative: 95
@@ -95,63 +95,63 @@ checks:
       shortterm:
         ticks: 5
         limit: 6
-      actions: cancel vl>2 log:notifylvlab:1:8:i cancel vl>4 log:notifylvlbb:1:7:i cancel vl>8 log:notifylvlcb:1:6:i cancel
+      actions:   vl>2 log:notifylvlab:1:8:i   vl>4 log:notifylvlbb:1:7:i   vl>8 log:notifylvlcb:1:6:i  
     noswing:
       active: false
       actions: vl>20 log:notifylvla:0:12:i
     reach:
       active: true
-      actions: cancel vl>5 log:notifylvlab:0:10:i cancel vl>8 log:notifylvlbb:0:8:i cancel vl>12 log:notifylvlcb:0:7:i cancel
+      actions:   vl>5 log:notifylvlab:0:10:i   vl>8 log:notifylvlbb:0:8:i   vl>12 log:notifylvlcb:0:7:i  
     wrongblock:
       active: true
       level: 10
-      actions: cancel vl>8 log:notifylvlab:0:8:i cancel vl>12 log:notifylvlbb:0:7:i cancel vl>18 log:notifylvlcb:0:6:i cancel
+      actions:   vl>8 log:notifylvlab:0:8:i   vl>12 log:notifylvlbb:0:7:i   vl>18 log:notifylvlcb:0:6:i  
   blockinteract:
     direction:
       active: true
-      actions: vl>5 cancel vl>24 log:notifylvlb:0:6:i cancel
+      actions: vl>5   vl>24 log:notifylvlb:0:6:i  
     reach:
       active: true
-      actions: cancel vl>5 log:notifylvlab:0:8:i cancel vl>8 log:notifylvlbb:0:7:i cancel vl>15 log:notifylvlcb:0:6:i cancel
+      actions:   vl>5 log:notifylvlab:0:8:i   vl>8 log:notifylvlbb:0:7:i   vl>15 log:notifylvlcb:0:6:i  
     speed:
       active: true
       interval: 2000
       limit: 52
-      actions: cancel vl>110 log:notifylvlab:0:8:i cancel vl>140 log:notifylvlbb:0:7:i cancel vl>195 log:notifylvlcb:0:6:i cancel
+      actions:   vl>110 log:notifylvlab:0:8:i   vl>140 log:notifylvlbb:0:7:i   vl>195 log:notifylvlcb:0:6:i  
     visible:
       active: true
-      actions: vl>4 cancel vl>35 log:notifylvlbb:0:9:i cancel
+      actions: vl>4   vl>35 log:notifylvlbb:0:9:i  
   blockplace:
     against:
       active: true
-      actions: cancel
+      actions:  
     autosign:
       active: true
       skipempty: false
-      actions: cancel vl>2 log:notifylvlab:0:8:i cancel vl>4 log:notifylvlbb:0:7:i cancel vl>8 log:notifylvlcb:0:6:i cancel
+      actions:   vl>2 log:notifylvlab:0:8:i   vl>4 log:notifylvlbb:0:7:i   vl>8 log:notifylvlcb:0:6:i  
     direction:
       active: true
-      actions: cancel vl>7 log:notifylvlab:0:8:i cancel vl>13 log:notifylvlbb:0:7:i cancel vl>20 log:notifylvlcb:0:6:i cancel
+      actions:   vl>7 log:notifylvlab:0:8:i   vl>13 log:notifylvlbb:0:7:i   vl>20 log:notifylvlcb:0:6:i  
     fastplace:
       active: true
       limit: 14
       shortterm:
         ticks: 12
         limit: 5
-      actions: cancel vl>12 log:notifylvlab:1:8:i cancel vl>35 log:notifylvlbb:0:7:i cancel vl>75 log:notifylvlcb:0:6:i cancel
+      actions:   vl>12 log:notifylvlab:1:8:i   vl>35 log:notifylvlbb:0:7:i   vl>75 log:notifylvlcb:0:6:i  
     reach:
       active: true
-      actions: cancel vl>4 log:notifylvlab:0:7:i cancel vl>12 log:notifylvlbb:0:6:i cancel vl>18 log:notifylvlcb:0:6:i cancel
+      actions:   vl>4 log:notifylvlab:0:7:i   vl>12 log:notifylvlbb:0:6:i   vl>18 log:notifylvlcb:0:6:i  
     noswing:
       active: false
       exceptions:
       - WATER_LILY
       - FLINT_AND_STEEL
-      actions: cancel vl>10 log:noswing:0:7:i cancel
+      actions:   vl>10 log:noswing:0:7:i  
     speed:
       active: true
       interval: 70
-      actions: cancel vl>140 log:notifylvlab:3:5:i cancel vl>180 log:notifylvlbb:1:6:i cancel vl>250 log:notifylvlcb:0:6:i cancel
+      actions:   vl>140 log:notifylvlab:3:5:i   vl>180 log:notifylvlbb:1:6:i   vl>250 log:notifylvlcb:0:6:i  
     preventmisc:
       boatsanywhere: true
   chat:
@@ -164,10 +164,10 @@ checks:
       question: '&c&lNCP &7»&r &cPlease type ''&6[captcha]&c'' to continue sending messages/commands.'
       success: '&c&lNCP &7»&r &aYou can keep chatting now'
       tries: 3
-      actions: cancel cmd:kickcaptcha vl>4 log:captcha:2:5:i cancel cmd:kickcaptcha:0:2
+      actions:   cmd:kickcaptcha vl>4 log:captcha:2:5:i   cmd:kickcaptcha:0:2
     color:
       active: false
-      actions: log:color:0:6:i cancel
+      actions: log:color:0:6:i  
     commands:
       active: true
       exclusions:
@@ -189,7 +189,7 @@ checks:
       shortterm:
         ticks: 19
         level: 3
-      actions: log:commands:0:5:i cancel cmd:kickcommands:0:2 vl>20 log:commands:0:5:i cancel cmd:tempkick1:0:2:i
+      actions: log:commands:0:5:i   cmd:kickcommands:0:2 vl>20 log:commands:0:5:i   cmd:tempkick1:0:2:i
     text:
       active: true
       allowvlreset: true
@@ -199,13 +199,13 @@ checks:
           factor: 0.9
           weight: 6
           level: 135
-          actions: cancel cmd:tellchatnormal vl>7 log:chatnormal:0:5:i cancel cmd:tellchatnormal:0:2 vl>20 log:chatnormal:0:5:i cancel cmd:kickchatnormal:0:2 vl>40 log:chatnormal:0:5:i cancel cmd:kickchat5:0:2
+          actions:   cmd:tellchatnormal vl>7 log:chatnormal:0:5:i   cmd:tellchatnormal:0:2 vl>20 log:chatnormal:0:5:i   cmd:kickchatnormal:0:2 vl>40 log:chatnormal:0:5:i   cmd:kickchat5:0:2
         shortterm:
           minimum: 2.0
           factor: 0.7
           weight: 3.0
           level: 18.0
-          actions: log:chatfast:0:5:i cancel cmd:kickchatfast:0:6 vl>20 log:chatfast:0:5:i cancel cmd:kickchat1:0:2 vl>40 log:chatfast:0:5:i cancel cmd:kickchat5:0:2
+          actions: log:chatfast:0:5:i   cmd:kickchatfast:0:6 vl>20 log:chatfast:0:5:i   cmd:kickchat1:0:2 vl>40 log:chatfast:0:5:i   cmd:kickchat5:0:2
       message:
         lettercount: 1.0
         partition: 1.0
@@ -249,7 +249,7 @@ checks:
         number: 1
         timeout: 60000
       kickmessage: Too fast re-login, try with a little delay.
-      actions: log:relog:0:15:i cancel vl>15 log:relog:0:10:i cancel cmd:tempkick5:0:2
+      actions: log:relog:0:15:i   vl>15 log:relog:0:10:i   cmd:tempkick5:0:2
     logins:
       active: false
       startupdelay: 600
@@ -260,14 +260,14 @@ checks:
   combined:
     bedleave:
       active: true
-      actions: cancel log:bedleave:0:7:i
+      actions:   log:bedleave:0:7:i
     enderpearl:
       active: true
       preventclickblock: true
     improbable:
       active: true
       level: 198
-      actions: cancel vl>2 log:notifylvla:0:6:i cancel vl>12 log:notifylvlb:0:6:i cancel vl>88 log:notifylvlc:0:6:i cancel
+      actions:   vl>2 log:notifylvla:0:6:i   vl>12 log:notifylvlb:0:6:i   vl>88 log:notifylvlc:0:6:i  
     invulnerable:
       active: true
       triggers:
@@ -281,7 +281,7 @@ checks:
         all: 0
     munchhausen:
       active: false
-      actions: cancel vl>100 cancel log:munchhausen:0:60:i
+      actions:   vl>100   log:munchhausen:0:60:i
     yawrate:
       rate: 105
       penalty:
@@ -290,7 +290,7 @@ checks:
         maximum: 2000
       improbable: true
   fight:
-    canceldead: true
+     dead: true
     toolchangepenalty: 150
     pvp:
       knockbackvelocity: default
@@ -299,32 +299,32 @@ checks:
     angle:
       active: true
       threshold: 55
-      actions: cancel vl>135 log:notifylvlac:0:6:i cancel vl>170 log:notifylvlbc:0:6:i cancel vl>225 log:notifylvlcc:0:6:i cancel
+      actions:   vl>135 log:notifylvlac:0:6:i   vl>170 log:notifylvlbc:0:6:i   vl>225 log:notifylvlcc:0:6:i  
     critical:
       active: true
-      cancel:
-        cancel: 125
+       :
+         : 125
         dividedamage: 0.08
       falldistance: 0.075
-      actions: vl>2 cancel vl>16 log:notifylvlac:0:6:i cancel vl>22 log:notifylvlbc:0:6:i cancel vl>28 log:notifylvlcc:0:6:i cancel
+      actions: vl>2   vl>16 log:notifylvlac:0:6:i   vl>22 log:notifylvlbc:0:6:i   vl>28 log:notifylvlcc:0:6:i  
     direction:
       active: true
       strict: false
       penalty: 160
-      actions: vl>1 cancel vl>6 log:notifylvlac:0:6:i cancel vl>12 log:notifylvlbc:0:6:i cancel vl>18 log:notifylvlcc:0:6:i cancel
+      actions: vl>1   vl>6 log:notifylvlac:0:6:i   vl>12 log:notifylvlbc:0:6:i   vl>18 log:notifylvlcc:0:6:i  
     fastheal:
       active: true
       interval: 4000
       buffer: 1000
-      actions: cancel vl>10 cancel log:notifylvlac:0:10:i vl>15 log:notifylvlbc:0:9:i cancel vl>20 log:notifylvlcc:0:8:i cancel
+      actions:   vl>10   log:notifylvlac:0:10:i vl>15 log:notifylvlbc:0:9:i   vl>20 log:notifylvlcc:0:8:i  
     godmode:
       active: true
       minage: 1100
       maxage: 5000
-      actions: log:notifylvlac:1:8:i cancel vl>10 log:notifylvlbc:0:7:i cancel vl>20 log:notifylvlcc:0:6:i cancel
+      actions: log:notifylvlac:1:8:i   vl>10 log:notifylvlbc:0:7:i   vl>20 log:notifylvlcc:0:6:i  
     noswing:
       active: true
-      actions: vl>1 cancel vl>6 log:notifylvlac:0:8:i cancel vl>12 log:notifylvlbc:0:7:i cancel vl>18 log:notifylvlcc:0:6:i cancel
+      actions: vl>1   vl>6 log:notifylvlac:0:8:i   vl>12 log:notifylvlbc:0:7:i   vl>18 log:notifylvlcc:0:6:i  
     reach:
       active: true
       survivaldistance: 4.2
@@ -332,14 +332,14 @@ checks:
       reduce: true
       reducedistance: 0.9
       reducestep: 0.15
-      actions: vl>1 cancel vl>3 log:notifylvlac:0:7:i cancel vl>6 log:notifylvlbc:0:6:i cancel vl>10 log:notifylvlcc:0:6:i cancel
+      actions: vl>1   vl>3 log:notifylvlac:0:7:i   vl>6 log:notifylvlbc:0:6:i   vl>10 log:notifylvlcc:0:6:i  
     selfhit:
       active: true
-      actions: log:fselfhit:1:8:i cancel
+      actions: log:fselfhit:1:8:i  
     speed:
       active: true
       limit: 13
-      actions: cancel vl>8 log:notifylvlac:0:6:i cancel vl>12 log:notifylvlbc:0:6:i cancel vl>16 log:notifylvlcc:0:6:i cancel
+      actions:   vl>8 log:notifylvlac:0:6:i   vl>12 log:notifylvlbc:0:6:i   vl>16 log:notifylvlcc:0:6:i  
       shortterm:
         ticks: 8
         limit: 6
@@ -348,7 +348,7 @@ checks:
       active: true
       limit: 4
       timeframe: 15
-      actions: log:drop:0:6:i cancel
+      actions: log:drop:0:6:i  
     fastclick:
       active: true
       sparecreative: true
@@ -356,7 +356,7 @@ checks:
       limit:
         shortterm: 3
         normal: 9
-      actions: vl>3 cancel vl>75 log:notifylvla:3:8:i cancel vl>160 log:notifylvlb:1:7:i cancel vl>220 log:notifylvlc:1:6:i cancel
+      actions: vl>3   vl>75 log:notifylvla:3:8:i   vl>160 log:notifylvlb:1:7:i   vl>220 log:notifylvlc:1:6:i  
     instantbow:
       active: true
       strict: true
@@ -364,25 +364,25 @@ checks:
       improbable:
         feedonly: false
         weight: 0.6 
-      actions: cancel vl>12 log:notifylvla:2:6:i cancel vl>16 log:notifylvlb:0:6:i cancel vl>20 log:notifylvlc:0:6:i cancel
+      actions:   vl>12 log:notifylvla:2:6:i   vl>16 log:notifylvlb:0:6:i   vl>20 log:notifylvlc:0:6:i  
     instanteat:
       active: true
-      actions: log:instanteat:2:5:i cancel
+      actions: log:instanteat:2:5:i  
     fastconsume:
       active: true
       duration: 0.67
       whitelist: false
       items: []
-      actions: log:fastconsume:2:8:i cancel
+      actions: log:fastconsume:2:8:i  
     gutenberg:
       active: true
-      actions: cancel log:gutenberg:0:10:i
+      actions:   log:gutenberg:0:10:i
     items:
       active: true
     open:
       active: true
       close: true
-      cancelother: true
+       other: true
     hotfix:
       duplication:
         fallingblockendportal: true
@@ -428,7 +428,7 @@ checks:
               speed: 0
             maxheight: 128
           modifiers: false
-      actions: vl>6 cancel vl>175 log:notifylvla:0:6:i cancel vl>325 log:notifylvlb:0:5:i cancel vl>680 log:notifylvlc:0:4:i cancel
+      actions: vl>6   vl>175 log:notifylvla:0:6:i   vl>325 log:notifylvlb:0:5:i   vl>680 log:notifylvlc:0:4:i  
     morepackets:
       active: true
       seconds: 6
@@ -439,7 +439,7 @@ checks:
         directviolation: 30
         epmviolation: 60
       setbackage: 40
-      actions: vl>1 cancel vl>25 log:notifylvla:2:7:i cancel vl>40 log:notifylvlb:1:6:i cancel vl>70 log:notifylvlc:0:6:i cancel
+      actions: vl>1   vl>25 log:notifylvla:2:7:i   vl>40 log:notifylvlb:1:6:i   vl>70 log:notifylvlc:0:6:i  
     nofall:
       active: true
       dealdamage: true
@@ -448,10 +448,10 @@ checks:
       resetonteleport: false
       resetonvehicle: true
       anticriticals: true
-      actions: log:nofall:0:5:i cancel
+      actions: log:nofall:0:5:i  
     passable:
       active: true
-      actions: vl>3 cancel vl>25 log:notifylvla:1:7:i cancel vl>40 log:notifylvlb:0:6:i cancel vl>110 log:notifylvlc:0:6:i cancel
+      actions: vl>3   vl>25 log:notifylvla:1:7:i   vl>40 log:notifylvlb:0:6:i   vl>110 log:notifylvlc:0:6:i  
       untracked:
         teleport:
           active: true
@@ -476,7 +476,7 @@ checks:
           - randomtp
           - wildtp
     survivalfly:
-      active: true
+      active: false
       extended:
         vertical-accounting: true
       stepheight: default
@@ -484,7 +484,7 @@ checks:
       setbackpolicy:
         falldamage: true
         voidtovoid: true
-      actions: vl>45 cancel vl>150 log:notifylvla:1:7:i cancel vl>350 log:notifylvlb:0:6:i cancel vl>1360 log:notifylvlc:0:6:i cancel
+      actions: vl>45   vl>150 log:notifylvla:1:7:i   vl>350 log:notifylvlb:0:6:i   vl>1360 log:notifylvlc:0:6:i  
       hover:
         active: true
         step: 5
@@ -498,7 +498,7 @@ checks:
       strictinvalidation: true
     splitmoves: default
     ignorestance: default
-    tempkickillegal: true
+    tempkickillegal: false
     loadchunks:
       join: true
       move: true
@@ -516,10 +516,10 @@ checks:
       schedulesetbacks: default
       morepackets:
         active: true
-        actions: cancel vl>12 log:morepackets:0:8:i cancel
+        actions:   vl>12 log:morepackets:0:8:i  
       envelope:
         active: default
-        actions: cancel vl>100 cancel log:vehicleenvelope:0:15:i
+        actions:   vl>100   log:vehicleenvelope:0:15:i
     message:
       illegalplayermove: Illegal move.
       illegalvehiclemove: Illegal vehicle move.
@@ -532,30 +532,30 @@ checks:
         two: 39
         four: 55
         eight: 100
-      actions: cancel vl>15 cancel log:notifylvlac:0:7:i vl>25 log:notifylvlbc:0:6:i cancel vl>40 log:notifylvlcc:0:6:i cancel
+      actions:   vl>15   log:notifylvlac:0:7:i vl>25 log:notifylvlbc:0:6:i   vl>40 log:notifylvlcc:0:6:i  
     flyingfrequency:
       active: true
       seconds: 5
       packetspersecond: 60
-      actions: cancel
+      actions:  
       reduceredundant:
         active: true
         seconds: 3
-        actions: cancel
+        actions:  
     keepalivefrequency:
       active: true
-      actions: cancel vl>10 cancel log:keepalive:0:10:i
+      actions:   vl>10   log:keepalive:0:10:i
     packetfrequency:
       active: default
       limitpersecond: 200
       seconds: 4
-      actions: cancel
+      actions:  
     sounddistance:
       active: true
       maxdistance: 150
     superseded:
       flying:
-        cancelwaiting: true
+         waiting: true
 strings:
   angle: '&c[player] &7could be using &6KillAura &7VL &6[violations] &7(Combat Hacks)'
   attackfrequency: '&c[player] &7could be using &6MultiAura &7VL &6[violations] &7(Combat Hacks)'
