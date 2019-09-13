@@ -312,7 +312,7 @@ public class NoCheatPlus extends JavaPlugin implements NoCheatPlusAPI {
         boolean res = false;
         synchronized (denyLoginNames) {
             for (final Entry<String, Long> entry : denyLoginNames.entrySet()) {
-                if (entry.getValue().longValue() < ts) {
+                if (entry.getValue() < ts) {
                     rem.add(entry.getKey());
                 }
             }
@@ -352,7 +352,7 @@ public class NoCheatPlus extends JavaPlugin implements NoCheatPlusAPI {
         playerName = playerName.trim().toLowerCase();
         synchronized (denyLoginNames) {
             final Long oldTs = denyLoginNames.get(playerName);
-            if (oldTs != null && ts < oldTs.longValue()) {
+            if (oldTs != null && ts < oldTs) {
                 return;
             }
             denyLoginNames.put(playerName, ts);
@@ -1005,11 +1005,8 @@ public class NoCheatPlus extends JavaPlugin implements NoCheatPlusAPI {
             processQueuedSubComponentHolders();
         }
 
-        // Register the commands handler.
-        final PluginCommand command = getCommand("nocheatplus");
-        final NoCheatPlusCommand commandHandler = new NoCheatPlusCommand(this, notifyReload);
-        command.setExecutor(commandHandler);
-        // (CommandHandler is TabExecutor.)
+        // Sorry no command.
+
 
         // Tell the permission registry, which permissions should get updated.
         // TODO: confine by check enabled flags.

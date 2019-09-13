@@ -29,11 +29,11 @@ logging:
       asynchronous: true
     file:
       active: false
-      prefix: ''
+      prefix: 'ac-'
       filename: nocheatplus.log
     ingamechat:
       active: true
-      prefix: '&c&lNCP &7»&r '
+      prefix: '&e&lAC &7»&r '
       subscriptions: false
 data:
   expiration:
@@ -48,7 +48,7 @@ data:
 protection:
   plugins:
     hide:
-      active: true
+      active: false
       nopermission:
         message: '&c&lNCP &7» &rYou do not have permission to run this command.'
         commands:
@@ -65,7 +65,7 @@ protection:
         - ncp
   commands:
     consoleonly:
-      active: true
+      active: false
       message: '&c&lNCP &7» &rThis command could cause problems. Please execute in console if you wish to continue.'
       commands:
       - restart
@@ -156,7 +156,7 @@ checks:
       boatsanywhere: true
   chat:
     captcha:
-      active: true
+      active: false
       skip:
         commands: false
       characters: abcdefghjkmnpqrtuvwxyzABCDEFGHJKMNPQRTUVWXYZ2346789
@@ -220,7 +220,7 @@ checks:
           lengthmsg: 1.0
           noletter: 0.0
       global:
-        active: true
+        active: false
         weight: 1.0
         words:
           active: false
@@ -229,7 +229,7 @@ checks:
         similarity:
           active: false
       player:
-        active: true
+        active: false
         words:
           active: false
         prefixes:
@@ -242,7 +242,7 @@ checks:
       message: '&c&lNCP &7»&r &cSlow down in chat!'
       timeout: 10
     relog:
-      active: true
+      active: false
       timeout: 3250
       warning:
         message: '&c&lNCP &7»&r &cYou relogged too fast!'
@@ -251,7 +251,7 @@ checks:
       kickmessage: Too fast re-login, try with a little delay.
       actions: log:relog:0:15:i cancel vl>15 log:relog:0:10:i cancel cmd:tempkick5:0:2
     logins:
-      active: true
+      active: false
       startupdelay: 600
       perworldcount: false
       seconds: 10
@@ -597,29 +597,29 @@ strings:
   instanteat: '&c[player] &7could be using &6Instant Eat &7VL &6[violations]'
   keepalive: '&c[player] &7could be using &6[check] &7VL &6[violations]'
   kick: kick [player]
-  kickalive: kick [player] &cNCP &7»&r &cSent too many keep alive packets!
-  kickattackfrequency: kick [player] &cNCP &7»&r &cToo many clicks!
-  kickbedleave: kick [player] &cNCP &7»&r &cBed Leave Packets!
-  kickbspeed: kick [player] &cNCP &7»&r &cInteracted too fast!
-  kickcaptcha: kick [player] &cNCP &7»&r &cPlease enter the captcha
+  kickalive: kick [player] AC-1
+  kickattackfrequency: kick [player] AC-2
+  kickbedleave: kick [player] AC-3
+  kickbspeed: kick [player] AC-4
+  kickcaptcha: kick [player] AC-5
   kickchat1: ncp tempkick [player] 1 &cNCP &7»&r You're not allowed to spam!
   kickchat5: ncp tempkick [player] 5 &cNCP &7»&r You're not allowed to spam!
   kickchatfast: kick [player] &cNCP &7»&r &cYou're not allowed to spam!
   kickchatnormal: kick [player] &cNCP &7»&r &cYou sent too many messages!
   kickcommands: ncp tempkick [player] 1 &cNCP &7»&r You sent too many commands!
-  kickfly: kick [player] &cNCP &7»&r &cYou were in the air too long!
-  kickfrequency: kick [player] &cNCP &7»&r &cToo many clicks!
-  kickgod: kick [player] &cNCP &7»&r &cGod Mode Detected!
-  kickinvaliddata: kick [player] &cNCP &7»&r &cYou sent Invalid Data!
-  kickpacketfrequency: kick [player] &cNCP &7»&r &cToo many packets.
-  kickpackets: kick [player] &cNCP &7»&r &cToo many packets sent!
-  kickselfhit: kick [player] &cNCP &7»&r &cYou hit yourself!
-  kickwb: kick [player] &cNCP &7»&r &cHitting blocks out of sync!
-  knockback: '&c[player] &7could be using &6[check] &7VL &6[violations]&'
-  morepackets: '&c[player] &7could be using &6Timer &7VL &6[violations]&7 (Too many packets)'
-  msgtempdenylogin: You are temporarily denied to join this server.
-  munchhausen: '&c[player] &7could be using &6[check] &7VL &6[violations]&7'
-  nofall: '&c[player] &7failed &6[check] &7VL &6[violations]'
+  kickfly: kick [player] AC-6
+  kickfrequency: kick [player] AC-7
+  kickgod: kick [player] AC-8
+  kickinvaliddata: kick [player] AC-9
+  kickpacketfrequency: kick [player] AC-10
+  kickpackets: kick [player] AC-11
+  kickselfhit: kick [player] AC-12
+  kickwb: kick [player] AC-13
+  knockback: '&c[player] AKB &7VL &6[violations]&'
+  morepackets: '&c[player] PACKETS &7VL &6[violations]&7'
+  msgtempdenylogin: "-\-"
+  munchhausen: '&c[player] &6[check] &7VL &6[violations]&7'
+  nofall: '&c[player] NF &7VL &6[violations]'
   chatfast: '&c[player] &7could be using &6[check] &7VL &6[violations]'
   noswing: '&c[player] &7could be using &6[check] &7VL &6[violations]'
   passable: '&c[player] &7could be using &6Phase &7VL &6[violations]'
@@ -628,15 +628,15 @@ strings:
   tempkick1: ncp tempkick [player] Please wait 1 minute before logging in
   tempkick5: ncp tempkick [player] Please wait 5 minutes before logging in
   vehicleenvelope: '&c[player] &7could be using &6[check] &7VL &6[violations]'
-  notifylvla: '&c[player] &7could be using &6[check] &7VL &a[violations]'
-  notifylvlb: '&c[player] &7could be using &6[check] &7VL &6[violations]'
-  notifylvlc: '&c[player] &7could be using &6[check] &7VL &c[violations]'
-  notifylvlab: '&c[player] &7could be using &6[check] &7VL &a[violations] &7(Block Cheats)'
-  notifylvlbb: '&c[player] &7could be using &6[check] &7VL &6[violations] &7(Block Cheats)'
-  notifylvlcb: '&c[player] &7could be using &6[check] &7VL &c[violations] &7(Block Cheats)'
-  notifylvlac: '&c[player] &7could be using &6[check] &7VL &a[violations] &7(Combat Hacks)'
-  notifylvlbc: '&c[player] &7could be using &6[check] &7VL &6[violations] &7(Combat Hacks)'
-  notifylvlcc: '&c[player] &7could be using &6[check] &7VL &c[violations] &7(Combat Hacks)'
+  notifylvla: '&c[player] &6[check] &7VL &a[violations]'
+  notifylvlb: '&c[player] &6[check] &7VL &6[violations]'
+  notifylvlc: '&c[player] &6[check] &7VL &c[violations]'
+  notifylvlab: '&c[player] &6[check] &7VL &a[violations] &7(Block Cheats)'
+  notifylvlbb: '&c[player] &6[check] &7VL &6[violations] &7(Block Cheats)'
+  notifylvlcb: '&c[player] &6[check] &7VL &c[violations] &7(Block Cheats)'
+  notifylvlac: '&c[player] &6[check] &7VL &a[violations] &7(Combat Hacks)'
+  notifylvlbc: '&c[player] &6[check] &7VL &6[violations] &7(Combat Hacks)'
+  notifylvlcc: '&c[player] &6[check] &7VL &c[violations] &7(Combat Hacks)'
 compatibility:
   managelisteners: false
   exemptions:

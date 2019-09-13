@@ -13,24 +13,6 @@ api-version: 1.13
 softdepend:
 - ProtocolLib
 - Carbon
-
-commands:
-    nocheatplus:
-        aliases: [ncp]
-        description: NoCheatPlus command(s).
-        # permissions: nocheatplus.admin.(...)
-        usage: |
-               Administrative commands overview:
-               /<command> top (entries) (check/s...) (sort by...) NEW.
-               /<command> info (player): Violation summary for a player.
-               /<command> inspect (player): Status info for a player.
-               /<command> notify on|off: In-game notifications per player.
-               /<command> removeplayer (player) [(check type)]: Remove data.
-               /<command> reload: Reload the configuration.
-               /<command> lag: Lag-related info.
-               /<command> version: Version information.
-               /<command> commands: List all commands, adds rarely used ones.
-
 permissions:
     # Check silent permissions (no log alerts if present).
     nocheatplus.checks.blockbreak.break.silent:
@@ -42,8 +24,6 @@ permissions:
     nocheatplus.checks.blockbreak.frequency.silent:
         default: false
     nocheatplus.checks.blockbreak.noswing.silent:
-        default: false
-    nocheatplus.checks.blockbreak.reach.silent:
         default: false
     nocheatplus.checks.blockbreak.wrongblock.silent:
         default: false
@@ -412,7 +392,6 @@ permissions:
                 description: Allow toggling notifications.
                 children:
                     nocheatplus.notify: true
-            nocheatplus.filter.command.nocheatplus: true
             nocheatplus.command.reload:
                 description: Allow the player to reload NoCheatPlus configuration.
                 children:
