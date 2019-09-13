@@ -7,6 +7,7 @@
 	<name>NCPBuildBase</name>
 	<version>1.1-SNAPSHOT</version>
 
+
 	<parent>
 		<groupId>fr.neatmonster</groupId>
 		<artifactId>nocheatplus-parent</artifactId>
@@ -42,6 +43,15 @@
 				<artifactId>maven-deploy-plugin</artifactId>
 				<configuration>
 					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>
